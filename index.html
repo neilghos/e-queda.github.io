@@ -2,79 +2,173 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Utsab Ghosh - Portfolio</title>
-  <!-- Bootstrap CSS CDN -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7OG2bLk4pFJZzM+Uj1QvN0O4JGpG04kJk7R"
-    crossorigin="anonymous"
-  />
   <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      background-color: #121212;
-      color: #e0e0e0;
-      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f0f0f;
+      color: #f0f0f0;
       padding: 40px 20px;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      animation: fadeIn 1s ease-in;
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+      max-width: 900px;
+      width: 100%;
+      background: #1a1a1a;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+      animation: slideIn 1s ease;
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      color: #00bcd4;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      color: #aaaaaa;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #00bcd4;
+      border-bottom: 2px solid #00bcd4;
+      padding-bottom: 6px;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    p, li {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
     a {
-      color: #61dafb;
-    }
-    a:hover {
-      color: #21a1f1;
+      color: #1e90ff;
       text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #00bcd4;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      background-color: #2a2a2a;
+      padding: 16px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      transition: background 0.3s;
+    }
+
+    li:hover {
+      background-color: #333333;
+    }
+
+    .socials {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .socials a {
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 25px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .socials a {
+        display: block;
+        margin: 10px 0;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container bg-dark rounded-4 shadow-lg p-5">
-    <h1 class="text-center text-info mb-3">Utsab Ghosh</h1>
-    <p class="text-center fst-italic text-secondary mb-5">
-      Full Stack Developer | Network Engineer
-    </p>
+  <div class="container">
+    <h1>Utsab Ghosh</h1>
+    <p class="subtitle">Full Stack Developer | Network Engineer</p>
 
-    <section id="contact" class="mb-5">
-      <h2 class="border-bottom border-info pb-2 text-info">Contact Details</h2>
+    <section>
+      <h2>Contact Details</h2>
       <p><strong>Phone:</strong> +91-9073291618</p>
       <p><strong>Email:</strong> ghosh.utsab2000@gmail.com</p>
     </section>
 
-    <section id="socials" class="mb-5 text-center">
-      <h2 class="border-bottom border-info pb-2 text-info">Social Links</h2>
-      <a href="https://www.linkedin.com/in/utsab-ghosh-94426a188" target="_blank" rel="noopener noreferrer" class="mx-3">LinkedIn</a>
-      <a href="https://github.com/se-queda" target="_blank" rel="noopener noreferrer" class="mx-3">GitHub</a>
-      <a href="https://leetcode.com/u/user3521I/" target="_blank" rel="noopener noreferrer" class="mx-3">LeetCode</a>
+    <section class="socials">
+      <h2>Social Links</h2>
+      <a href="https://www.linkedin.com/in/utsab-ghosh-94426a188" target="_blank">LinkedIn</a>
+      <a href="https://github.com/se-queda" target="_blank">GitHub</a>
+      <a href="https://leetcode.com/u/user3521I/" target="_blank">LeetCode</a>
     </section>
 
-    <section id="skills" class="mb-5">
-      <h2 class="border-bottom border-info pb-2 text-info">Skills</h2>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item bg-dark text-info"><strong>Programming:</strong> C++, Python, JavaScript</li>
-        <li class="list-group-item bg-dark text-info"><strong>Web Development:</strong> HTML, CSS, Django</li>
-        <li class="list-group-item bg-dark text-info"><strong>Network Engineer:</strong> Wireshark, Cisco Packet Tracer, TCP/IP, UDP, OSI Model, Wireless networking</li>
-        <li class="list-group-item bg-dark text-info"><strong>Data Science:</strong> TensorFlow, PyTorch, scikit-learn, Streamlit</li>
-        <li class="list-group-item bg-dark text-info"><strong>Tools & Platforms:</strong> Linux, Git, GitHub, VS Code, Anaconda stack</li>
-        <li class="list-group-item bg-dark text-info"><strong>Problem Solving:</strong> Data Structures, Algorithms, Competitive Programming</li>
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Programming:</strong> C++, Python, JavaScript</li>
+        <li><strong>Web Development:</strong> HTML, CSS, Django</li>
+        <li><strong>Network Engineer:</strong> Wireshark, Cisco Packet Tracer, TCP/IP, UDP, OSI Model, Wireless networking</li>
+        <li><strong>Data Science:</strong> TensorFlow, PyTorch, scikit-learn, Streamlit</li>
+        <li><strong>Tools & Platforms:</strong> Linux, Git, GitHub, VS Code, Anaconda stack</li>
+        <li><strong>Problem Solving:</strong> Data Structures, Algorithms, Competitive Programming</li>
       </ul>
     </section>
 
-    <section id="projects">
-      <h2 class="border-bottom border-info pb-2 text-info mb-4">Projects</h2>
-      <div class="mb-3 p-3 bg-secondary rounded">
-        <h5 class="text-info">Wireshark-Based Wireless Protocol Analysis</h5>
-        <p>Analyzed wireless network traffic using Wireshark to identify protocols and troubleshoot issues.</p>
-        <a href="https://github.com/your-github/wireshark-wireless-analysis" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
-      </div>
-      <div class="mb-3 p-3 bg-secondary rounded">
-        <h5 class="text-info">Mental Health Companion Web App</h5>
-        <p>Built a web app focused on mental health resources and self-help tools using React.</p>
-        <a href="https://github.com/your-github/mental-health-companion" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
-      </div>
+    <section>
+      <h2>Projects</h2>
+      <ul>
+        <li>
+          <strong>Wireshark-Based Wireless Protocol Analysis</strong><br />
+          Analyzed wireless network traffic using Wireshark to identify protocols and troubleshoot issues.<br />
+          <a href="https://github.com/your-github/wireshark-wireless-analysis" target="_blank">GitHub Repo</a>
+        </li>
+        <li>
+          <strong>Mental Health Companion Web App</strong><br />
+          Built a web app focused on mental health resources and self-help tools using React.<br />
+          <a href="https://github.com/your-github/mental-health-companion" target="_blank">GitHub Repo</a>
+        </li>
+      </ul>
     </section>
   </div>
-
-  <!-- Bootstrap JS Bundle (Popper + Bootstrap JS) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
