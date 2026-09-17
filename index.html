@@ -6,297 +6,97 @@
   <meta name="description" content="Utsab Ghosh — machine learning researcher working on representation learning, graph learning, information retrieval, and time-series learning.">
   <title>Utsab Ghosh</title>
   <style>
-    :root {
-      --paper: #f7f5f0;
-      --ink: #20201e;
-      --muted: #6b6963;
-      --line: #d8d4cb;
-      --accent: #314b3d;
-      --soft: #eeebe4;
-    }
-
-    * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      background: var(--paper);
-      color: var(--ink);
-      font-family: Georgia, 'Times New Roman', serif;
-      font-size: 17px;
-      line-height: 1.68;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .page {
-      width: min(820px, calc(100% - 40px));
-      margin: 0 auto;
-      padding: 72px 0 54px;
-    }
-
-    header {
-      padding-bottom: 34px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .topline {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 24px;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(2.35rem, 7vw, 3.45rem);
-      line-height: 1;
-      letter-spacing: -0.035em;
-      font-weight: 500;
-    }
-
-    nav {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.84rem;
-      white-space: nowrap;
-    }
-
-    nav a { margin-left: 16px; }
-
-    a {
-      color: var(--accent);
-      text-decoration-thickness: 1px;
-      text-underline-offset: 3px;
-    }
-
-    a:hover { text-decoration-thickness: 2px; }
-
-    .role {
-      margin: 15px 0 0;
-      color: var(--muted);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.98rem;
-      letter-spacing: 0.015em;
-    }
-
-    .intro {
-      margin: 29px 0 0;
-      max-width: 720px;
-      font-size: 1.08rem;
-    }
-
-    .links {
-      margin-top: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 18px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.88rem;
-    }
-
-    section {
-      padding: 38px 0 6px;
-    }
-
-    h2 {
-      margin: 0 0 22px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--line);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.82rem;
-      font-weight: 600;
-      letter-spacing: 0.11em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    h3 {
-      margin: 0 0 5px;
-      font-size: 1.12rem;
-      font-weight: 600;
-    }
-
-    p { margin: 0 0 16px; }
-
-    .research-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px 30px;
-    }
-
-    .research-item {
-      padding: 0 0 20px;
-    }
-
-    .research-item p,
-    .work p,
-    .publication p {
-      color: #4f4e49;
-      font-size: 0.96rem;
-    }
-
-    .work,
-    .publication {
-      padding: 0 0 24px;
-      margin-bottom: 24px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .work:last-child,
-    .publication:last-child {
-      border-bottom: 0;
-      margin-bottom: 0;
-    }
-
-    .meta {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--muted);
-      font-size: 0.82rem;
-      margin-bottom: 7px;
-    }
-
-    .paper-links {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.84rem;
-    }
-
-    .contact-block {
-      background: var(--soft);
-      padding: 22px 24px;
-      margin-top: 5px;
-    }
-
-    .contact-block p:last-child { margin-bottom: 0; }
-
-    footer {
-      margin-top: 40px;
-      padding-top: 18px;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.76rem;
-    }
-
-    @media (max-width: 650px) {
-      .page { padding-top: 42px; }
-      .topline { display: block; }
-      nav { margin-top: 20px; white-space: normal; }
-      nav a { margin: 0 15px 0 0; }
-      .research-grid { grid-template-columns: 1fr; gap: 0; }
-    }
+    :root { --paper:#f7f5f0; --ink:#20201e; --muted:#6b6963; --line:#d8d4cb; --accent:#314b3d; --soft:#eeebe4; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:Georgia,'Times New Roman',serif; font-size:17px; line-height:1.68; -webkit-font-smoothing:antialiased; }
+    .page { width:min(820px,calc(100% - 40px)); margin:0 auto; padding:72px 0 54px; }
+    header { padding-bottom:34px; border-bottom:1px solid var(--line); }
+    .topline { display:flex; justify-content:space-between; align-items:baseline; gap:24px; }
+    h1 { margin:0; font-size:clamp(2.35rem,7vw,3.45rem); line-height:1; letter-spacing:-0.035em; font-weight:500; }
+    nav,.links,.paper-links,.meta,footer,.role { font-family:Arial,Helvetica,sans-serif; }
+    nav { font-size:.84rem; white-space:nowrap; }
+    nav a { margin-left:16px; }
+    a { color:var(--accent); text-decoration-thickness:1px; text-underline-offset:3px; }
+    a:hover { text-decoration-thickness:2px; }
+    .role { margin:15px 0 0; color:var(--muted); font-size:.98rem; letter-spacing:.015em; }
+    .intro { margin:29px 0 0; max-width:720px; font-size:1.08rem; }
+    .links { margin-top:20px; display:flex; flex-wrap:wrap; gap:8px 18px; font-size:.88rem; }
+    section { padding:38px 0 6px; }
+    h2 { margin:0 0 22px; padding-bottom:8px; border-bottom:1px solid var(--line); font-family:Arial,Helvetica,sans-serif; font-size:.82rem; font-weight:600; letter-spacing:.11em; text-transform:uppercase; color:var(--muted); }
+    h3 { margin:0 0 5px; font-size:1.12rem; font-weight:600; }
+    p { margin:0 0 16px; }
+    .research-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px 30px; }
+    .research-item { padding:0 0 20px; }
+    .research-item p,.work p,.publication p { color:#4f4e49; font-size:.96rem; }
+    .work,.publication { padding:0 0 24px; margin-bottom:24px; border-bottom:1px solid var(--line); }
+    .work:last-child,.publication:last-child { border-bottom:0; margin-bottom:0; }
+    .meta { color:var(--muted); font-size:.82rem; margin-bottom:7px; }
+    .paper-links { font-size:.84rem; display:flex; gap:14px; flex-wrap:wrap; }
+    .contact-block { background:var(--soft); padding:22px 24px; margin-top:5px; }
+    .contact-block p:last-child { margin-bottom:0; }
+    footer { margin-top:40px; padding-top:18px; border-top:1px solid var(--line); color:var(--muted); font-size:.76rem; }
+    @media (max-width:650px) { .page{padding-top:42px}.topline{display:block}nav{margin-top:20px;white-space:normal}nav a{margin:0 15px 0 0}.research-grid{grid-template-columns:1fr;gap:0} }
   </style>
 </head>
 <body>
-  <main class="page">
-    <header id="about">
-      <div class="topline">
-        <h1>Utsab Ghosh</h1>
-        <nav aria-label="Primary navigation">
-          <a href="#research">Research</a>
-          <a href="#publications">Publications</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
+<main class="page">
+  <header id="about">
+    <div class="topline">
+      <h1>Utsab Ghosh</h1>
+      <nav aria-label="Primary navigation"><a href="#research">Research</a><a href="#publications">Publications</a><a href="#contact">Contact</a></nav>
+    </div>
+    <p class="role">Machine Learning Researcher · Kolkata, India</p>
+    <p class="intro">I am an independent researcher interested in representation learning and in how the structure, geometry, and propagation of learned representations shape model behaviour. My current work spans graph representation learning, information retrieval, time-series learning, and related learning architectures.</p>
+    <div class="links"><a href="mailto:ghosh.utsab2000@gmail.com">Email</a><a href="https://github.com/neilghos" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/utsab-ghosh-94426a188" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
+  </header>
 
-      <p class="role">Machine Learning Researcher · Kolkata, India</p>
+  <section id="research">
+    <h2>Research</h2>
+    <div class="research-grid">
+      <div class="research-item"><h3>Representation Learning</h3><p>Learning representations whose structure exposes useful relationships between features, samples, and tasks.</p></div>
+      <div class="research-item"><h3>Graph Learning</h3><p>Graph representations, structural geometry, anomaly detection, and alternatives to conventional message-passing pipelines.</p></div>
+      <div class="research-item"><h3>Information Retrieval</h3><p>Representation transfer, retrieval adaptation, and mechanisms for learning robust relevance representations across domains.</p></div>
+      <div class="research-item"><h3>Time-Series Learning</h3><p>Representation learning for forecasting and anomaly detection, including structure-aware and dynamics-informed models.</p></div>
+    </div>
+  </section>
 
-      <p class="intro">
-        I am an independent researcher interested in representation learning and in how the structure,
-        geometry, and propagation of learned representations shape model behaviour. My current work spans
-        graph representation learning, information retrieval, time-series learning, and related learning architectures.
-      </p>
+  <section id="selected-work">
+    <h2>Selected Research</h2>
+    <article class="work">
+      <div class="meta">FEATURE REPRESENTATION LEARNING</div>
+      <h3>Inverted Contrastive Learning for Unsupervised Feature Selection</h3>
+      <p>A feature-centric contrastive learning formulation that treats features, rather than samples, as the objects whose representations are learned and compared.</p>
+      <div class="paper-links"><a href="https://arxiv.org/abs/2609.00782" target="_blank" rel="noopener noreferrer">Preprint</a><a href="https://github.com/neilghos/ICLFS" target="_blank" rel="noopener noreferrer">Code</a></div>
+    </article>
+  </section>
 
-      <div class="links">
-        <a href="mailto:ghosh.utsab2000@gmail.com">Email</a>
-        <a href="https://github.com/neilghos" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/utsab-ghosh-94426a188" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      </div>
-    </header>
+  <section id="publications">
+    <h2>Publications</h2>
+    <article class="publication">
+      <div class="meta">2026 · CIKM</div>
+      <h3>When Features Become Instances: Inverted Contrastive Learning for Unsupervised Feature Selection</h3>
+      <p>Utsab Ghosh, Roshni Chakraborty · ACM International Conference on Information and Knowledge Management (CIKM), 2026.</p>
+      <div class="paper-links"><a href="https://arxiv.org/abs/2609.00782" target="_blank" rel="noopener noreferrer">arXiv</a><a href="https://github.com/neilghos/ICLFS" target="_blank" rel="noopener noreferrer">Code</a></div>
+    </article>
+    <article class="publication">
+      <div class="meta">2026 · PREPRINT</div>
+      <h3>MADS: A Multiview Acoustic Descriptor Set Beyond Standard Spectral Summaries</h3>
+      <p>Utsab Ghosh, Roshni Chakraborty · arXiv preprint, 2026.</p>
+      <div class="paper-links"><a href="https://arxiv.org/abs/2609.00792" target="_blank" rel="noopener noreferrer">arXiv</a></div>
+    </article>
+  </section>
 
-    <section id="research">
-      <h2>Research</h2>
-      <div class="research-grid">
-        <div class="research-item">
-          <h3>Representation Learning</h3>
-          <p>Learning representations whose structure exposes useful relationships between features, samples, and tasks.</p>
-        </div>
-        <div class="research-item">
-          <h3>Graph Learning</h3>
-          <p>Graph representations, structural geometry, anomaly detection, and alternatives to conventional message-passing pipelines.</p>
-        </div>
-        <div class="research-item">
-          <h3>Information Retrieval</h3>
-          <p>Representation transfer, retrieval adaptation, and mechanisms for learning robust relevance representations across domains.</p>
-        </div>
-        <div class="research-item">
-          <h3>Time-Series Learning</h3>
-          <p>Representation learning for forecasting and anomaly detection, including structure-aware and dynamics-informed models.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="selected-work">
-      <h2>Selected Research</h2>
-
-      <article class="work">
-        <div class="meta">FEATURE REPRESENTATION LEARNING</div>
-        <h3>Inverted Contrastive Learning for Unsupervised Feature Selection</h3>
-        <p>
-          A feature-centric contrastive learning formulation that treats features, rather than samples, as the objects whose representations are learned and compared.
-        </p>
-        <div class="paper-links">
-          <a href="https://github.com/neilghos/ICLFS" target="_blank" rel="noopener noreferrer">Code</a>
-        </div>
-      </article>
-
-      <article class="work">
-        <div class="meta">GRAPH REPRESENTATION LEARNING</div>
-        <h3>Graph2Map</h3>
-        <p>
-          Exploring topology-bearing spatial representations of graphs so that graph structure can be processed through spatial and vision-oriented learning machinery.
-        </p>
-        <div class="paper-links">
-          <a href="https://github.com/neilghos/graph2map" target="_blank" rel="noopener noreferrer">Code</a>
-        </div>
-      </article>
-
-      <article class="work">
-        <div class="meta">GRAPH ANOMALY DETECTION</div>
-        <h3>EchoBasin-GAD</h3>
-        <p>
-          Research on graph anomaly detection through homophily, local structural context, and basin-relative representations.
-        </p>
-        <div class="paper-links">
-          <a href="https://github.com/neilghos/Echobasin_GAD" target="_blank" rel="noopener noreferrer">Code</a>
-        </div>
-      </article>
-    </section>
-
-    <section id="publications">
-      <h2>Publications</h2>
-      <article class="publication">
-        <div class="meta">2026 · CIKM</div>
-        <h3>Inverted Contrastive Learning for Unsupervised Feature Selection</h3>
-        <p>Utsab Ghosh et al. · ACM International Conference on Information and Knowledge Management (CIKM), 2026.</p>
-        <div class="paper-links">
-          <a href="https://github.com/neilghos/ICLFS" target="_blank" rel="noopener noreferrer">Code</a>
-        </div>
-      </article>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="contact-block">
-        <p><strong>Email:</strong> <a href="mailto:ghosh.utsab2000@gmail.com">ghosh.utsab2000@gmail.com</a></p>
-        <p><strong>Phone:</strong> <a href="tel:+919073291618">+91 90732 91618</a></p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/neilghos" target="_blank" rel="noopener noreferrer">neilghos</a></p>
-        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/utsab-ghosh-94426a188" target="_blank" rel="noopener noreferrer">Utsab Ghosh</a></p>
-      </div>
-    </section>
-
-    <footer>
-      Utsab Ghosh · Last updated September 2026
-    </footer>
-  </main>
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-block">
+      <p><strong>Email:</strong> <a href="mailto:ghosh.utsab2000@gmail.com">ghosh.utsab2000@gmail.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+919073291618">+91 90732 91618</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/neilghos" target="_blank" rel="noopener noreferrer">neilghos</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/utsab-ghosh-94426a188" target="_blank" rel="noopener noreferrer">Utsab Ghosh</a></p>
+    </div>
+  </section>
+  <footer>Utsab Ghosh · Last updated September 2026</footer>
+</main>
 </body>
 </html>
