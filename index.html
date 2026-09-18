@@ -13,8 +13,7 @@
     body { margin:0; background:var(--paper); color:var(--ink); font-family:Georgia,'Times New Roman',serif; font-size:17px; line-height:1.68; -webkit-font-smoothing:antialiased; }
     .page { width:min(820px,calc(100% - 40px)); margin:0 auto; padding:72px 0 54px; }
     header { padding-bottom:34px; border-bottom:1px solid var(--line); }
-    .site-nav { display:flex; justify-content:flex-end; align-items:center; min-height:34px; margin-bottom:46px; padding-bottom:14px; border-bottom:1px solid var(--line); }
-    .topline { display:block; }
+    .topline { display:flex; justify-content:space-between; align-items:baseline; gap:24px; }
     h1 { margin:0; font-size:clamp(1.9rem,5vw,2.3rem); line-height:1.08; letter-spacing:-0.025em; font-weight:500; }
     nav,.links,.paper-links,.meta,footer,.role,.theme-toggle { font-family:Arial,Helvetica,sans-serif; }
     .header-actions { display:flex; align-items:center; gap:18px; }
@@ -50,19 +49,17 @@
     .contact-block { background:var(--soft); padding:22px 24px; margin-top:5px; }
     .contact-block p:last-child { margin-bottom:0; }
     footer { margin-top:40px; padding-top:18px; border-top:1px solid var(--line); color:var(--muted); font-size:.76rem; }
-    @media (max-width:650px) { .page{padding-top:42px}.site-nav{justify-content:flex-start;margin-bottom:34px;padding-right:42px}.topline{display:block}.header-actions{margin-top:0}.theme-toggle{top:14px;right:14px}nav{white-space:normal}nav>a{margin:0 15px 0 0}.nav-research{margin:0 15px 0 0}.research-menu{left:0;right:auto}.research-grid{grid-template-columns:1fr;gap:0} }
+    @media (max-width:650px) { .page{padding-top:42px}.topline{display:block}.header-actions{margin-top:20px}.theme-toggle{top:14px;right:14px}nav{white-space:normal}nav>a{margin:0 15px 0 0}.nav-research{margin:0 15px 0 0}.research-menu{left:0;right:auto}.research-grid{grid-template-columns:1fr;gap:0} }
   </style>
 </head>
 <body>
 <main class="page">
   <header id="about">
-    <div class="site-nav">
+    <div class="topline">
+      <h1>Utsab Ghosh</h1>
       <div class="header-actions"><nav aria-label="Primary navigation"><a href="#about">About</a><details class="nav-research"><summary>Research</summary><div class="research-menu"><a href="#research">Current Interests</a><a href="#selected-work">Selected Research</a><a href="#ongoing-research">Ongoing Research</a></div></details><a href="#publications">Publications</a></nav></div>
     </div>
     <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" title="Toggle color theme">☾</button>
-    <div class="topline">
-      <h1>Utsab Ghosh</h1>
-    </div>
     <p class="role">Machine Learning Researcher · Kolkata, India</p>
     <div class="links" aria-label="Contact links"><a href="mailto:ghosh.utsab2000@gmail.com">Email</a><a href="https://github.com/neilghos" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/utsab-ghosh-94426a188" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
     <p class="intro">I am a machine learning researcher broadly interested in representation learning and in developing new learning methods for complex and structured data. My research explores how the formulation of a learning problem, the structure imposed on data, and the mechanisms through which information is learned and transformed can shape model behaviour. I have explored these questions across multivariate time-series anomaly detection, graph representation learning, signed networks, bipartite graphs in recommender systems, feature-centric approaches to dimensionality reduction, and audio machine learning through knowledge distillation and designed acoustic descriptors.</p>
