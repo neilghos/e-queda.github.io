@@ -6,7 +6,8 @@
   <meta name="description" content="Utsab Ghosh — machine learning researcher working on representation learning, graph learning, information retrieval, and time-series learning.">
   <title>Utsab Ghosh</title>
   <style>
-    :root { --paper:#f7f5f0; --ink:#20201e; --muted:#6b6963; --line:#d8d4cb; --accent:#314b3d; --soft:#eeebe4; }
+    :root { --paper:#f7f5f0; --ink:#20201e; --muted:#6b6963; --line:#d8d4cb; --accent:#314b3d; --soft:#eeebe4; color-scheme:light; }
+    :root[data-theme="dark"] { --paper:#171816; --ink:#eceae4; --muted:#aaa79f; --line:#373934; --accent:#a9c7b2; --soft:#22241f; color-scheme:dark; }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
     body { margin:0; background:var(--paper); color:var(--ink); font-family:Georgia,'Times New Roman',serif; font-size:17px; line-height:1.68; -webkit-font-smoothing:antialiased; }
@@ -14,7 +15,10 @@
     header { padding-bottom:34px; border-bottom:1px solid var(--line); }
     .topline { display:flex; justify-content:space-between; align-items:baseline; gap:24px; }
     h1 { margin:0; font-size:clamp(1.9rem,5vw,2.3rem); line-height:1.08; letter-spacing:-0.025em; font-weight:500; }
-    nav,.links,.paper-links,.meta,footer,.role { font-family:Arial,Helvetica,sans-serif; }
+    nav,.links,.paper-links,.meta,footer,.role,.theme-toggle { font-family:Arial,Helvetica,sans-serif; }
+    .header-actions { display:flex; align-items:center; gap:18px; }
+    .theme-toggle { border:0; background:transparent; color:var(--muted); padding:0; font-size:.84rem; cursor:pointer; text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px; }
+    .theme-toggle:hover { color:var(--accent); text-decoration-thickness:2px; }
     nav { font-size:.84rem; white-space:nowrap; }
     nav a { margin-left:16px; }
     a { color:var(--accent); text-decoration-thickness:1px; text-underline-offset:3px; }
@@ -37,7 +41,7 @@
     .contact-block { background:var(--soft); padding:22px 24px; margin-top:5px; }
     .contact-block p:last-child { margin-bottom:0; }
     footer { margin-top:40px; padding-top:18px; border-top:1px solid var(--line); color:var(--muted); font-size:.76rem; }
-    @media (max-width:650px) { .page{padding-top:42px}.topline{display:block}nav{margin-top:20px;white-space:normal}nav a{margin:0 15px 0 0}.research-grid{grid-template-columns:1fr;gap:0} }
+    @media (max-width:650px) { .page{padding-top:42px}.topline{display:block}.header-actions{margin-top:20px;justify-content:space-between}nav{white-space:normal}nav a{margin:0 15px 0 0}.research-grid{grid-template-columns:1fr;gap:0} }
   </style>
 </head>
 <body>
@@ -45,7 +49,7 @@
   <header id="about">
     <div class="topline">
       <h1>Utsab Ghosh</h1>
-      <nav aria-label="Primary navigation"><a href="#research">Research</a><a href="#publications">Publications</a></nav>
+      <div class="header-actions"><nav aria-label="Primary navigation"><a href="#research">Research</a><a href="#publications">Publications</a></nav><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode">Dark</button></div>
     </div>
     <p class="role">Machine Learning Researcher · Kolkata, India</p>
     <div class="links" aria-label="Contact links"><a href="mailto:ghosh.utsab2000@gmail.com">Email</a><a href="https://github.com/neilghos" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/utsab-ghosh-94426a188" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
@@ -133,5 +137,27 @@
 
   <footer>Utsab Ghosh · Last updated September 2026</footer>
 </main>
+<script>
+  (() => {
+    const root = document.documentElement;
+    const button = document.getElementById('theme-toggle');
+    const saved = localStorage.getItem('theme');
+    const systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const initial = saved || (systemDark ? 'dark' : 'light');
+
+    const applyTheme = (theme) => {
+      root.dataset.theme = theme;
+      button.textContent = theme === 'dark' ? 'Light' : 'Dark';
+      button.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+    };
+
+    applyTheme(initial);
+    button.addEventListener('click', () => {
+      const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', next);
+      applyTheme(next);
+    });
+  })();
+</script>
 </body>
 </html>
